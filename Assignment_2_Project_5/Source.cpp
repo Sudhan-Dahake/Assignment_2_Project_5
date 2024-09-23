@@ -48,5 +48,13 @@ int main(void) {
 	// close the file
 	file.close();
 
+
+	// if in debug mode then print data
+	#ifdef _DEBUG
+		for (int i = 0; i < student_data.size(); i++) {
+			std::cout << student_data[i].lastName << ", " << student_data[i].firstName;	
+		};
+	#endif
+
 	return 1;
 };
